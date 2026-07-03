@@ -1,0 +1,53 @@
+{
+  "name": "@mnemosyne-oss/pi-mnemosyne",
+  "version": "0.1.0",
+  "description": "Pi extension and skill for Mnemosyne — local-first AI memory",
+  "keywords": [
+    "pi-package",
+    "mnemosyne",
+    "memory",
+    "ai-memory",
+    "pi-extension",
+    "pi-skill"
+  ],
+  "license": "MIT",
+  "author": "Mnemosyne OSS <hello@mnemosyne.dev>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnemosyne-oss/pi-mnemosyne.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mnemosyne-oss/pi-mnemosyne/issues"
+  },
+  "homepage": "https://github.com/mnemosyne-oss/pi-mnemosyne#readme",
+  "type": "module",
+  "main": "src/index.ts",
+  "files": [
+    "src",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests --ext .ts"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "pi": {
+    "extensions": [
+      "src/index.ts"
+    ],
+    "skills": [
+      "skills"
+    ]
+  }
+}
