@@ -75,6 +75,19 @@ npm run typecheck
 npm test
 ```
 
+## Releasing
+
+1. Bump `version` in `package.json`.
+2. Commit and push.
+3. Tag and push:
+   ```bash
+   git tag -a v0.1.0 -m "Release v0.1.0"
+   git push origin v0.1.0
+   ```
+4. The [release workflow](.github/workflows/release.yml) publishes to npm.
+
+Make sure the `NPM_TOKEN` secret is set in the GitHub repository settings.
+
 ## License
 
 MIT © Mnemosyne OSS
